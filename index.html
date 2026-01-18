@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minifolio</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ede9fe;
+            padding: 40px;
+        }
+        #container
+        {
+            background-color: #f5f3f5ff;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 14px;
+        }
+        h1 , #about ,#skills,#content{
+            text-align: center;
+        }
+        .skill
+        {
+            display:inline-block;
+            background-color: white;
+            padding: 8px 35px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            color: #6d28d9;
+        }
+        #actions
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px;
+        }
+        button{
+            background-color: #6d28d9;
+            color: white;
+            border: 0;
+            border-radius: 8px;
+            padding: 12px 18px;
+            font-weight: bold;
+        }
+        #content
+        {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            display: none;
+        }
+        @media (max-width:600px)
+        {
+            #actions
+            {
+                flex-direction: column;
+            }
+        }
+        #highlight
+        {
+            color: #6d28d9;
+            font-weight: bold;
+        }
+            
+        
+    </style>
+ 
+</head>
+<body>
+    <div id="container">
+        <h1>Priya</h1>
+        <p id="about">Hi, I am Learning<span id="highlight">MERN Stack</span> Development </p>
+    <div id="skills">
+        <p class="skill">HTML</p>
+        <p class="skill">CSS</p>
+        <p class="skill">JavaScript</p>
+    </div>
+    <div id="actions">
+        <button onclick="showAbout()">About</button>
+        <button onclick="showCert()">Certificate</button>
+        <button onclick="showContact()">Contact</button>
+        <button onclick="showProject()">Project</button>
+    </div>
+    <div id="content"></div>
+    </div>
+    <script>
+        let contentbox = document.getElementById("content");
+        function showAbout()
+        {
+         contentbox.style.display="block";
+        contentbox.innerText = "I am studing Computer Engineering"
+        }
+        function showCert()
+        {
+         contentbox.style.display="block";
+        contentbox.innerText = "Java Full Stack Developer"
+        }
+        function showContact()
+        {
+         contentbox.style.display="block";
+        contentbox.innerText = "911995xxxx"
+        }
+        function showProject()
+        {
+         contentbox.style.display="block";
+        contentbox.innerText = "Virtual Bankking System, Spotify, Whatsapp Automation"
+        }
+
+    </script>
+</body>
+</html>
